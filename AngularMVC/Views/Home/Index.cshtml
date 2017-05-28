@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/ng-Script/HomeModule.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body ng-app="homeApp">
+    <div ng-controller="homeCtrl">
+        <table style="border-spacing: 10px;">
+            <tr>
+                <td style="vertical-align: top">
+                    <div style="cursor: pointer" ng-click="selectPerson(objP)" ng-repeat="objP in persons">
+                        {{objP.FirstName}} {{objP.LastName}}
+                    </div>
+                </td>
+                <td style="vertical-align: top">
+                    First Name: <input type="text" ng-model="selectedObject.FirstName" /> <br />
+                    Last Name Name: <input type="text" ng-model="selectedObject.LastName" /><br />
+                    Address: <input type="text" ng-model="selectedObject.Address" /><br /><br />
+                    <input type="button" ng-click="savePerson()" value="Save" />
+
+                </td>
+            </tr>
+
+        </table>
+
+
+        @*{{persons}}*@
+    </div>
+    @*<div ng-controller="home2Ctrl">
+
+    </div>*@
+
+</body>
+</html>
